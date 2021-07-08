@@ -1,6 +1,43 @@
 ---
 layout: layouts/base.njk
+title: Web Developer near you 
 permalink: /
 ---
 
-<h3 style="color: red!important">Hello! Welcome to the thing. </h3>
+<main> 
+    <section class="hero-banner">
+        <div class="container-fluid">
+            <div class="hero-banner__left">
+                <h1 class="landing-h1">Hey, <br> I'm Ken.</h1>
+                <h3 class="landing-h2"> I build websites and write web copy. </h3> 
+                <p class="landing-p">If you need a website, and you don't want to deal with gimmicks, jargon, or other buzzwords, click the button below. </p>
+                <a href="" class="landing-cta-btn btn btn-primary">Learn More</a>
+            </div>
+            <div class="hero-banner__right">
+                <img class="hero-image" src="" alt="">
+            </div>
+        </div>
+    </section>
+
+    <section class="services-banner">
+        <div class="container-fluid">
+            <h2 class="separator--full">
+                <span class="primary-blue"> WHAT DO I DO? </span> 
+            </h2>
+            <p>I wear a lot of hats, but these are the main three. If you think I can help you with something else, it never hurt to ask!</p>
+            
+            {% include "components/services.njk" %}
+
+        </div>
+    </section>
+
+    <section class="about-me">
+        <div class="container-fluid">
+            <h2 class="separator--full">
+                <span class="primary-blue"> WHO AM I? </span> 
+            </h2>
+        </div>
+    </section>
+
+
+</main>
