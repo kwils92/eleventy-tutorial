@@ -1,3 +1,9 @@
+/** COLOURS **/
+:root {
+    --site-grey: #f5f5f5;
+    --site-accent-blue: #4f85d8;
+}
+
 /** FONTS **/
 @font-face {
     font-family: PoppinsRegular;
@@ -33,6 +39,39 @@ body{
         background-color: white;
     }
 
+    /* Sections */
+    .generic-section{
+        min-height: 100vh; 
+        display: flex; 
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+
+        .generic-section__grey {
+            background-color: var(--site-grey);
+        }
+
+        .generic-section__blue {
+            background-color: var(--site-accent-blue);
+        }
+
+    /* Headers */ 
+    .generic-header{
+        font-size: 2.75em; 
+    }
+
+    .generic-header__left{
+        text-align: left;
+    }
+
+    .generic-header__right{
+        text-align: right;
+    }
+
+    /* Paragraphs */ 
+    .generic-section-text{
+    }
+
 /** HOME PAGE **/
 
 /* section */
@@ -50,12 +89,12 @@ body{
     display: none; 
 }
 
-.landing-h1{
+.hero-h1{
     font-size: 3em; 
     font-family: PoppinsBold;
 }
 
-.landing-h2{
+.hero-h2{
     font-size: 1.25em; 
     font-family: PoppinsMedItalic;
     color: #0d6efd;
@@ -107,4 +146,46 @@ body{
 
 .add-space{
     margin-right: 0.72em;
+}
+
+/** POST PAGE **/
+.post-title{
+    text-align: center;
+}
+
+.post-img{
+    width: 100%;
+    max-height: auto;
+
+    margin: 1em 0 1em 0;
+}
+
+.post-body{
+    
+}
+
+
+/* MODIFIERS */
+.bold{
+    font-weight: 600;
+}
+
+.italic{
+    font-style: italic;
+}
+
+.justify-full{
+    text-align: justify;
+}
+
+.justify-left{
+    text-align: left;
+}
+
+.justify-right{
+    text-align: right;
+}
+
+.justify-center{
+    text-align: center;
 }

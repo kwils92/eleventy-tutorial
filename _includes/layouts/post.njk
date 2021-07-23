@@ -2,7 +2,9 @@
 layout: layouts/base.njk
 ---
 
-<h2>{{ title }}</h2> 
+<h2 class="post-title">{{ title }}</h2> 
 
-<img src="{{ featuredImage | url }}" alt="tst"></img>
-<p> {{ content | safe }} </p>
+<img class="post-img" src="{{ featuredImage | url }}" alt="tst"></img>
+<div class="container-fluid post-body">
+    {{ content | safe }}
+</div> 

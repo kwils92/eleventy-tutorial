@@ -1,5 +1,7 @@
 backend: 
-  name: test-repo 
+  #name:test-repo
+  #name:git-gateway
+  name: test-repo
   branch: main 
 
 media_folder: "_site/images/uploads"
