@@ -1,0 +1,301 @@
+:root {
+    --primary-colour: #0d6efd;
+    --secondary-colour: #f5f5f5;
+}
+
+/** ANIMATIONS **/
+    /* Gives text a floating style, was originally used for "Scroll" hover CTA */
+    @keyframes floating-text {
+        0% { transform: translate(0, 0px); }
+        50% { transform: translate(0, 35px); }
+        100% { transform: translate(0, -0px); }
+    }
+
+    /* Slide element in from the left */
+    @keyframes slidein-left {
+        0% {
+            transform: translateX(-100%);
+        }
+        100% {
+            transform: translateX(0);
+        }
+    }
+
+    /* Slide element in from the right */
+    @keyframes slidein-right {
+        0% {
+            transform: translateX(100%);
+        }
+        100% {
+            transform: translateX(0);
+        }
+    }
+
+    /* Fade element into existence */ 
+    @keyframes fadein {
+        from { opacity: 0; }
+        to { opacity: 1; }
+    }
+
+    /* ANIMATION CLASSES */
+    .a-slide-left__fast{
+        animation: 0.5s slidein-left;
+    }
+    
+    .a-slide-left__slow{
+        animation: 0.75s slidein-left;
+    }
+    
+    .a-slide-right__fast{
+        animation: 0.5s slidein-left;
+    }
+    
+    .a-slide-right__slow{
+        animation: 0.70s slidein-left;
+    }
+    
+    .a-fade-in{
+        animation: 1s fadein; 
+    }
+
+/** FONTS **/
+@font-face {
+    font-family: PoppinsRegular;
+    src: url("/assets/fonts/Poppins-Regular.ttf");
+  }
+
+@font-face {
+    font-family: PoppinsBold;
+    src: url("/assets/fonts/Poppins-Bold.ttf");
+}
+
+@font-face {
+    font-family: PoppinsMedium;
+    src: url("/assets/fonts/Poppins-Medium.ttf");
+}
+
+@font-face {
+    font-family: PoppinsMedItalic;
+    src: url("/assets/fonts/Poppins-MediumItalic.ttf");
+}
+
+body{
+    font-family: PoppinsRegular;
+}
+
+/** COMPONENTS **/ 
+    /* Navbar */
+    /* Main Navbar container */
+    #nav-container{ 
+        min-height: 10vh; 
+        background-color: white;
+    }
+
+    /* Navbar logo */
+    .logo{
+        max-width: 150px;
+    }
+
+    /* Footer */
+    #footer{
+        /* color: white;
+        min-height: 25vh;
+        background-color: var(--primary-colour);
+        display: flex;
+        justify-content: space-between;
+        align-items: center; */
+        color: white;
+        background-color: var(--primary-colour);
+        text-align: center;
+        display: grid; 
+        grid-template-areas: 
+        "logo"
+        "header"
+        "phone"
+        "social";
+    }
+
+    #footer--logo{
+        grid-area: logo;
+        padding: 1.5em;
+    }
+
+    #footer--header{
+        grid-area: header;
+    }
+
+    #footer--contact-info{
+        grid-area: phone;
+    }
+
+    #footer--contact-details{  
+        padding: 0;     
+        list-style-type:none;
+    }
+
+    #footer--contact-details a{
+        color: white;
+        text-decoration: none;
+    }
+
+    #footer--social-icons{
+        padding: 1em;
+        grid-area: social;
+        font-size: 1.25em;
+    }
+
+    #footer--icon-list{
+        display: flex; 
+        justify-content: space-evenly;
+    }
+
+    #footer--icon-list li{
+        font-size: 1.25em;
+        list-style-type: none;
+    }
+
+
+    /* Sections */
+        /* Abstract section that doesn't */
+        .abstract-section{
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Top-most hero banner section */
+        .hero-section{
+            min-height: 85vh;
+            max-height: 85vh;
+
+            text-align: center;
+            justify-content: space-around;
+        }
+
+        /* generic section for breaking up pages */
+        .generic-section{
+            min-height: 100vh; 
+
+            justify-content: space-evenly;
+        }
+
+    /* Headers */
+        /* Specific hero-header, as opposed to generic-section headers */ 
+        /* .hero-header{
+
+        }  */
+
+        /* Primary text in the header */
+        .hero-header--primary{
+            font-size: 2.25em; 
+            font-family: PoppinsBold;
+        }
+
+        /* Secondary text in the header */
+        .hero-header--secondary{
+            font-size: 1.25em; 
+            font-family: PoppinsMedItalic;
+            color: var(--primary-colour);
+        }
+
+        /* Different style from hero banner. Generic style. */ 
+        .section-header--tertiary{
+            font-size: 2.75em;
+        }
+        
+        /* Nested inside sections, article header */ 
+        .hero-header--quaternary{
+            font-size: 1.5em;
+        }
+
+        /* Section header */ 
+        .section-header--left{
+            text-align: left;
+        }
+
+        .section-header--right{
+            text-align: right;
+        }
+        /* Service card header */
+        .service-card{
+            color: white; 
+            background: rgb(13,110,253);
+            background: linear-gradient(299deg, rgba(13,110,253,1) 0%, rgba(37,130,222,1) 71%, rgba(34,88,168,1) 100%);            /*background-color: var(--primary-colour);*/
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+            text-align: center;
+
+            margin: 3em 0 5em 0;
+            padding: 1.5em;
+            width: 100%;  
+        }
+
+        .service-card--header{
+            font-size: 1.25em;
+            font-family: PoppinsMedItalic;
+        }
+
+        .service-card--txt{
+            margin: 2em 0 2em 0; 
+        }
+
+
+    /* Text */
+        .primary-text{
+            font-family: PoppinsRegular
+        }
+
+    /* Images */
+    #hero-image{
+        width: 90%;
+    }
+
+    #auditing-page > #hero-image{
+        width: 70%; margin-left: 15%;
+    }
+
+    /* Lists */
+        #services-list li{
+            margin: 0 0 1em 0;
+        }
+    
+
+/** MODIFIERS **/
+/* This section is for code that changes tiny bits of styling. */
+
+/* Modifies the paragraph tag to add some separation between title and list (Homepage) */
+#space-for-service-section{
+    padding: 1em 0 1em 0; 
+}
+
+#add-space-for-icon{
+    margin: 0 .72em 0 0;
+}
+
+.bold{
+    font-weight: 600;
+}
+
+.italic{
+    font-style: italic;
+}
+
+.justify-center{
+    text-align: center;
+}
+
+.bg-site-primary{
+    color: white;
+    background-color: var(--primary-colour);
+}
+
+.bg-site-primary a{
+    color: white;
+    font-weight: 600;
+}
+
+.bg-site-secondary{
+    background-color: var(--secondary-colour);
+}
+
+.cl-site-primary{
+    color: var(--primary-colour);
+}

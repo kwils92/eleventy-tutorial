@@ -1,7 +1,38 @@
-/** COLOURS **/
 :root {
     --site-grey: #f5f5f5;
-    --site-accent-blue: #4f85d8;
+    --site-accent-blue: #0d6efd;
+}
+
+/** ANIMATIONS **/
+@keyframes floating-text {
+    0% { transform: translate(0, 0px); }
+    50% { transform: translate(0, 35px); }
+    100% { transform: translate(0, -0px); }
+}
+
+/* Slide text in from the left */
+@keyframes slidein-left {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+/* Slide text in from the right */
+@keyframes slidein-right {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadein {
+    from { opacity: 0; }
+    to { opacity: 1; }
 }
 
 /** FONTS **/
@@ -39,6 +70,30 @@ body{
         background-color: white;
     }
 
+    #logo{
+        max-width: 150px;
+    }
+
+    /* Scroll Indicator */
+    /* This is the little hovering 'scroll' text that is at the bottom of each hero banner */
+    #scroll-indicator{
+        animation-name: floating-text;
+        animation-duration: 3s;
+        animation-iteration-count: infinite;
+        animation-timing-function: ease-in-out;
+    }
+
+    #scroll-indicator--text{
+        font-size: small;
+        margin: 0;
+        text-transform: uppercase;
+    }
+
+    #scroll-indicator--icon{
+        margin: 0;
+    }
+
+
     /* Sections */
     .generic-section{
         min-height: 100vh; 
@@ -54,6 +109,18 @@ body{
         .generic-section__blue {
             background-color: var(--site-accent-blue);
         }
+
+    .hero-banner{
+        max-height: 85vh;
+        min-height: 85vh; 
+        display: flex; 
+        flex-direction: column;
+        justify-content: space-around;
+    }
+
+    .full-vh-section{
+        min-height: 100vh; 
+    }
 
     /* Headers */ 
     .generic-header{
@@ -74,10 +141,10 @@ body{
 
 /** HOME PAGE **/
 
-/* section */
-.hero-banner{
-    max-height: 70vh;
-    min-height: 70vh; 
+
+
+.hero-header-text{
+
 }
 
 /* left side of section */
@@ -97,7 +164,7 @@ body{
 .hero-h2{
     font-size: 1.25em; 
     font-family: PoppinsMedItalic;
-    color: #0d6efd;
+    color: var(--site-accent-blue);
 }
 
 .landing-p{
@@ -109,13 +176,21 @@ body{
 }
 
 .services-card{
+    background-color: var(--site-accent-blue);
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
     text-align: center;
     margin: 3em 0 5em 0;
+    padding: 1.5em;
+    width: 100%; 
 }
 
 .services-h3{
     font-size: 1.25em;
     font-family: PoppinsMedItalic;
+}
+
+.services-body{
+    margin: 2em 0 2em 0;
 }
 
 /* MISC */
@@ -141,7 +216,11 @@ body{
 }
 
 .primary-blue{
-    color: #0d6efd;
+    color: var(--site-accent-blue);
+}
+
+.primary-white{
+    color: white; 
 }
 
 .add-space{
@@ -188,4 +267,37 @@ body{
 
 .justify-center{
     text-align: center;
+}
+
+.spacing{
+    margin-top: 5em;
+    margin-bottom: 5em;
+}
+
+.a-slide-left__fast{
+    animation: 0.5s slidein-left;
+}
+
+.a-slide-left__slow{
+    animation: 0.75s slidein-left;
+}
+
+.a-slide-right__fast{
+    animation: 0.5s slidein-left;
+}
+
+.a-slide-right__slow{
+    animation: 0.70s slidein-left;
+}
+
+.a-fade-in{
+    animation: 1s fadein; 
+}
+
+.body-text{
+    padding: 2em 0 2em 0; 
+}
+
+#services-list li{
+    margin: 0 0 1em 0;
 }

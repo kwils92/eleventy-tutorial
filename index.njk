@@ -3,46 +3,83 @@ layout: layouts/base.njk
 title: Web Developer near you 
 permalink: /
 ---
+<main id="home-page"> 
+    <section id="hero-banner" class="abstract-section hero-section container-fluid">
+        <header>
+            <h1 class="hero-header--primary a-slide-left__fast" >
+                Is your website stressing you out? 
+            </h1>
+            <h2 class="hero-header--secondary a-slide-left__slow">
+               It doesn't have to. 
+            </h2>
+        </header>
 
-<main> 
-    <section class="hero-banner">
-        <div class="container-fluid">
-            <div class="hero-banner__left">
-                <h1 class="hero-h1">Hey, <br> I'm Ken.</h1>
-                <h3 class="hero-h2"> I build websites and write web copy. </h3> 
-                <p class="landing-p">If you need a website, and you don't want to deal with gimmicks, jargon, or other buzzwords, click the button below. </p>
-                <a href="" class="landing-cta-btn btn btn-primary">Learn More</a>
-            </div>
-            <div class="hero-banner__right">
-                <img class="hero-image" src="" alt="">
-            </div>
+        <div>
+            <a href="" class="btn btn-primary btn-lg a-fade-in">
+                Learn more
+            </a>
         </div>
+
+        <div>
+            <img src="/assets/imgs/programmer.svg" id="hero-image">
+        </div>
+
+        <!-- <div id="scroll-indicator" class=" justify-center text-muted">
+            <p id="scroll-indicator--text">scroll down</p>
+            <i id="scroll-indicator--icon" class="fas fa-chevron-down"></i>
+        </div> -->
     </section>
 
-    <section class="services-banner">
+    <section id="services "class="abstract-section generic-section">
+
+        <header class="container-fluid">
+            <h2 class="section-header--tertiary">What exactly do you do?</h2>
+        </header>
+
         <div class="container-fluid">
-            <h2 class="separator--full">
-                <span class="primary-blue"> WHAT DO I DO? </span> 
-            </h2>
-            <p>I provide simple web solutions for businesses and entrepreneurs. Today, web development and design is overly complicated. Most businesses don't need an entire WordPress website, and frankly there are few reasons to use something like Squarespace or Wix (definitely don't use Wix). Websites should be simple, safe, and reliable. </p>
-            
+            <p id="space-for-service-section">I do a couple things. </p>
+            <ul id="services-list">
+                <li class="list-item">First and foremost, <span class="bold">I help small business owners and entrepreneurs</span> navigate the confusing world of web development.</li>
+                <li class="list-item">Second, I choose technologies and <span class="bold">build websites</span> that suit the specific needs of their business.</li>
+                <li class="list-item">And third, <span class="bold">I write web copy</span> that helps their business express who they are and what they sell</li>
+            </ul>
+        </div>
+
+        <div>
             {% include "components/services.njk" %}
-
         </div>
+
     </section>
 
-    <section class="about-me">
-        <div class="container-fluid">
-            <h2 class="separator--full">
-                <span class="primary-blue"> WHO AM I? </span> 
+    <section id="about-me" class="abstract-section generic-section container-fluid">
+        <header>
+            <h2 class="section-header--tertiary">
+                Who is Ken? 
             </h2>
-
-            <p class="justify-full">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quis dui bibendum tellus condimentum fermentum et ut est. Nunc congue facilisis justo, in bibendum dui consequat cursus.</p>
-            <p class="justify-full">Curabitur facilisis ac nulla vitae viverra. Phasellus purus massa, ornare in sapien eu, ullamcorper suscipit ex. Suspendisse nec dignissim nibh. Curabitur convallis volutpat egestas. Aliquam consequat elit ut pellentesque venenatis. Suspendisse molestie metus eu pretium malesuada.</p>
+        </header>
+        <br>
+        <br>
+        <div>
+            <h3>About:</h3>
+            <p>I've been writing since he was a child and building websites since the early 2000's when I was in middle school.</p>
             
+            <br>
         </div>
+
+        <div>
+            <h3>Education:</h3>
+            <ul id="services-list">
+                <li class="list-item">2013 graduate of <span class="bold"> Algonquin College's</span> <em>Professional Writing</em> program</li>
+                <li class="list-item">2020 graduate of <span class="bold">St. Lawrence College's</span> <em>Computer Programmer Analyst</em> program</li>
+            </ul>
+            <br>
+        </div>
+
+        <div>
+            <h3>A Final Message:</h3>
+            <p>I'm never going to sell you a solution you don't need. We can find a good solution <span class="bold">on your budget</span>. I promise.</p> 
+        </div>
+
     </section>
-
-
 </main>
 
