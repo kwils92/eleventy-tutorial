@@ -1,6 +1,7 @@
 :root {
     --primary-colour: #0d6efd;
     --secondary-colour: #f5f5f5;
+    --tertiary-colour: rgb(222, 222, 222);
 }
 
 /** ANIMATIONS **/
@@ -154,6 +155,17 @@ body{
         list-style-type: none;
     }
 
+    /* Misc elements */
+    .btn:hover{
+        transition: all .15s ease-in-out;
+        transform: scale(1.1);
+    }
+
+    .section-img__right{
+        width: 100%; 
+        margin: 15% 0 15% 0;
+    }
+
 
     /* Sections */
         /* Abstract section that doesn't */
@@ -174,15 +186,68 @@ body{
         /* generic section for breaking up pages */
         .generic-section{
             min-height: 100vh; 
-
             justify-content: space-evenly;
         }
+
+        #reviews-section{
+            justify-content: center;
+            display: flex;
+            align-items: flex-start;
+            flex-wrap: wrap;
+        }
+
+        /* This is the service card section */
+        #services{
+            display: flex;
+            flex-direction: column;
+        }
+
+        #reasons{
+            display: flex;
+            flex-direction: column;
+        }
+
+        .c-carousel{
+            width: 100%;
+            display: flex;
+            min-height: 15em;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .c-carousel-item{
+            padding: 0 10% 0 10%;
+        }
+
+        .c-card{
+            margin: 10% 0 10% 0;
+        }
+
+        .latest-posts{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .img-with-content{
+            justify-content: center;
+            display: flex;
+            flex-direction: column;
+            flex-wrap: nowrap;
+        }
+
+
 
     /* Headers */
         /* Specific hero-header, as opposed to generic-section headers */ 
         /* .hero-header{
 
         }  */
+
+        /* Adding some space around headers for sections */
+        .header-spacing{
+            margin-top: 2em;
+        }
 
         /* Primary text in the header */
         .hero-header--primary{
@@ -194,17 +259,16 @@ body{
         .hero-header--secondary{
             font-size: 1.25em; 
             font-family: PoppinsMedItalic;
-            color: var(--primary-colour);
         }
 
         /* Different style from hero banner. Generic style. */ 
         .section-header--tertiary{
-            font-size: 2.75em;
+            font-size: 1.75em;
         }
         
         /* Nested inside sections, article header */ 
         .hero-header--quaternary{
-            font-size: 1.5em;
+            font-size: 1em;
         }
 
         /* Section header */ 
@@ -215,13 +279,21 @@ body{
         .section-header--right{
             text-align: right;
         }
+
+        #process-header{
+            margin-top: 10%;
+        }
+
         /* Service card header */
         .service-card{
             color: white; 
             background: rgb(13,110,253);
-            background: linear-gradient(299deg, rgba(13,110,253,1) 0%, rgba(37,130,222,1) 71%, rgba(34,88,168,1) 100%);            /*background-color: var(--primary-colour);*/
+            /* background: linear-gradient(299deg, rgba(13,110,253,1) 0%, rgba(37,130,222,1) 71%, rgba(34,88,168,1) 100%);            background-color: var(--primary-colour); */
             box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
             text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content:space-between;
 
             margin: 3em 0 5em 0;
             padding: 1.5em;
@@ -245,7 +317,7 @@ body{
 
     /* Images */
     #hero-image{
-        width: 90%;
+        width: 70%;
     }
 
     #auditing-page > #hero-image{
@@ -260,6 +332,18 @@ body{
 
 /** MODIFIERS **/
 /* This section is for code that changes tiny bits of styling. */
+.no-link-underline{
+    text-decoration: none;
+}
+
+
+.txt-white{
+    color: white !important; 
+}
+
+.txt-site-primary{
+    color: var(--primary-colour) !important;
+}
 
 /* Modifies the paragraph tag to add some separation between title and list (Homepage) */
 #space-for-service-section{
@@ -268,6 +352,21 @@ body{
 
 #add-space-for-icon{
     margin: 0 .72em 0 0;
+}
+
+/* There's randomly padding after the ul, probably default? 0 margin to remove space between ul and svg*/
+#services-list{
+    margin: 0;
+    padding-bottom: 2em;
+}
+
+.flip-svg-border{
+    position: absolute;
+    width: 100%;
+    height: 100px;
+    bottom: 0;
+    overflow: hidden;
+    transform: rotate(180deg);
 }
 
 .bold{
@@ -284,7 +383,15 @@ body{
 
 .bg-site-primary{
     color: white;
-    background-color: var(--primary-colour);
+    background-color: var(--primary-colour) !important;
+}
+
+.bg-site-primary__no-txt{
+    background-color: var(--primary-colour) !important;
+}
+
+.bg-site-tertiary{
+    background-color: var(--tertiary-colour)!important;
 }
 
 .bg-site-primary a{
@@ -298,4 +405,135 @@ body{
 
 .cl-site-primary{
     color: var(--primary-colour);
+}
+
+@media only screen and (min-width: 980px) {
+    /** SECTIONS **/
+    .navbar{
+        padding: 0 20% 0 20%;
+    }
+
+    .hero-section{
+        min-height: 55vh;
+        max-height: 55vh;
+
+        padding: 0 20% 0 20%;
+
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        display: flex;
+        flex-direction: row;
+    }
+
+    .generic-section{
+        min-height: 75vh;
+        padding: 0 20% 0 20%;
+        justify-content: space-evenly;
+    }
+
+    
+    .generic-section__small{
+        min-height: 45vh; 
+        padding: 0 20% 0 20%; 
+        justify-content: space-around;
+    }
+
+    .latest-posts{
+        display: flex; 
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    #reviews-section{
+        align-items: center;
+        display:flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+    }
+
+    .c-carousel{
+        width: 70%;
+    }
+
+    .img-with-content{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+    }
+
+    /* MODIFIERS */
+    #home-page-hero-header h2{
+        padding: 0 0 5% 10%;
+    }
+
+    #reasons{
+        width: 80%;
+        display: grid; 
+        grid-gap: 25px;
+        grid-template-areas: 
+        "reason-1 reason-2" 
+        "reason-3 reason-4";
+    }
+
+    #reason-1{
+        grid-area: reason-1;
+        padding-bottom: 20px;
+    }
+
+    #reason-2{
+        grid-area: reason-2;
+    }
+
+    #reason-3{
+        grid-area: reason-3;
+    }
+
+    #reason-4{
+        grid-area: reason-4;
+    }
+
+    #services{
+        display: flex;
+        flex-direction: row;
+    }
+
+    .service-card:hover{
+        transition: all .15s ease-in-out;
+        transform: scale(1.1);
+        cursor: pointer;
+    }
+
+    /* Primary text in the header */
+    .hero-header--primary{
+        font-size: 2.25em; 
+        font-family: PoppinsBold;
+    }
+
+    /* Secondary text in the header */
+    .hero-header--secondary{
+        font-size: 1.25em; 
+        font-family: PoppinsMedItalic;
+    }
+
+    /* Different style from hero banner. Generic style. */ 
+    .section-header--tertiary{
+        font-size: 2.75em;
+    }
+    
+    /* Nested inside sections, article header */ 
+    .hero-header--quaternary{
+        font-size: 1.5em;
+    }
+
+    .section-img__right{
+        max-width: 40%;
+        margin: 0; 
+    }
+
+    #process-header{
+        margin-top: 0;
+    }
 }

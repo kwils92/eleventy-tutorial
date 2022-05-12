@@ -1,0 +1,209 @@
+:root {
+    --primary-colour: #0d6efd;
+    --secondary-colour: #f5f5f5;
+}
+
+/** ANIMATIONS **/
+    /* Gives text a floating style, was originally used for "Scroll" hover CTA */
+    @keyframes floating-text {
+        0% { transform: translate(0, 0px); }
+        50% { transform: translate(0, 35px); }
+        100% { transform: translate(0, -0px); }
+    }
+
+    /* Slide element in from the left */
+    @keyframes slidein-left {
+        0% {
+            transform: translateX(-100%);
+        }
+        100% {
+            transform: translateX(0);
+        }
+    }
+
+    /* Slide element in from the right */
+    @keyframes slidein-right {
+        0% {
+            transform: translateX(100%);
+        }
+        100% {
+            transform: translateX(0);
+        }
+    }
+
+    /* Fade element into existence */ 
+    @keyframes fadein {
+        from { opacity: 0; }
+        to { opacity: 1; }
+    }
+
+    /* ANIMATION CLASSES */
+    .a-slide-left__fast{
+        animation: 0.5s slidein-left;
+    }
+    
+    .a-slide-left__slow{
+        animation: 0.75s slidein-left;
+    }
+    
+    .a-slide-right__fast{
+        animation: 0.5s slidein-left;
+    }
+    
+    .a-slide-right__slow{
+        animation: 0.70s slidein-left;
+    }
+    
+    .a-fade-in{
+        animation: 1s fadein; 
+    }
+
+/** FONTS **/
+@font-face {
+    font-family: PoppinsRegular;
+    src: url("/assets/fonts/Poppins-Regular.ttf");
+  }
+
+@font-face {
+    font-family: PoppinsBold;
+    src: url("/assets/fonts/Poppins-Bold.ttf");
+}
+
+@font-face {
+    font-family: PoppinsMedium;
+    src: url("/assets/fonts/Poppins-Medium.ttf");
+}
+
+@font-face {
+    font-family: PoppinsMedItalic;
+    src: url("/assets/fonts/Poppins-MediumItalic.ttf");
+}
+
+body{
+    font-family: PoppinsRegular;
+}
+
+/** COMPONENTS **/ 
+    /* Navbar */
+    /* Main Navbar container */
+    #nav-container{ 
+        min-height: 10vh; 
+        background-color: white;
+    }
+
+    /* Navbar logo */
+    .logo{
+        max-width: 150px;
+    }
+
+    /* Footer */
+    #footer{
+        /* color: white;
+        min-height: 25vh;
+        background-color: var(--primary-colour);
+        display: flex;
+        justify-content: space-between;
+        align-items: center; */
+        color: white;
+        background-color: var(--primary-colour);
+        text-align: center;
+        display: grid; 
+        grid-template-areas: 
+        "logo"
+        "header"
+        "phone"
+        "social";
+    }
+
+    #footer--logo{
+        grid-area: logo;
+        padding: 1.5em;
+    }
+
+    #footer--header{
+        grid-area: header;
+    }
+
+    #footer--contact-info{
+        grid-area: phone;
+    }
+
+    #footer--contact-details{  
+        padding: 0;     
+        list-style-type:none;
+    }
+
+    #footer--contact-details a{
+        color: white;
+        text-decoration: none;
+    }
+
+    #footer--social-icons{
+        padding: 1em;
+        grid-area: social;
+        font-size: 1.25em;
+    }
+
+    #footer--icon-list{
+        display: flex; 
+        justify-content: space-evenly;
+    }
+
+    #footer--icon-list li{
+        font-size: 1.25em;
+        list-style-type: none;
+    }
+
+    /* There's randomly padding after the ul, probably default? 0 margin to remove space between ul and svg*/
+    #services-list{
+        margin: 0;
+        padding-bottom: 2em;
+    }
+
+
+
+/** MODIFIERS **/
+/* This section is for code that changes tiny bits of styling. */
+
+.section-padding{
+    padding: 0 20% 0 20%;
+}
+
+/* Modifies the paragraph tag to add some separation between title and list (Homepage) */
+#space-for-service-section{
+
+}
+
+#add-space-for-icon{
+    margin: 0 .72em 0 0;
+}
+
+.bold{
+    font-weight: 600;
+}
+
+.italic{
+    font-style: italic;
+}
+
+.justify-center{
+    text-align: center;
+}
+
+.bg-site-primary{
+    color: white;
+    background-color: var(--primary-colour);
+}
+
+.bg-site-primary a{
+    color: white;
+    font-weight: 600;
+}
+
+.bg-site-secondary{
+    background-color: var(--secondary-colour);
+}
+
+.cl-site-primary{
+    color: var(--primary-colour);
+}

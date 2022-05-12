@@ -1,0 +1,68 @@
+---
+layout: layouts/base.njk
+title: Web Developer near you 
+permalink: /nah
+---
+<main id="home-page"> 
+    <section id="hero-banner" class="abstract-section hero-section container-fluid">
+        <header id="home-page-hero-header">
+            <h1 class="hero-header--primary a-slide-left__fast" >
+                Is your website stressing you out? 
+            </h1>
+            <h2 class="hero-header--secondary a-slide-left__slow">
+               It doesn't have to. 
+            </h2>
+
+            <div>
+                <a href="" class="btn btn-primary btn-lg a-fade-in">
+                    Learn more
+                </a>
+            </div>
+        </header>
+
+        <div>
+            <img src="/assets/imgs/programmer.svg" id="hero-image">
+        </div>
+
+        <!-- <div id="scroll-indicator" class=" justify-center text-muted">
+            <p id="scroll-indicator--text">scroll down</p>
+            <i id="scroll-indicator--icon" class="fas fa-chevron-down"></i>
+        </div> -->
+    </section>
+
+    <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" width="1900" height="200" preserveAspectRatio="none" viewBox="0 0 1900 200">
+        <g mask="url(&quot;#SvgjsMask1038&quot;)" fill="none">
+            <path d="M 0,45 C 126.8,73 380.4,175 634,185 C 887.6,195 1014.8,101.8 1268,95 C 1521.2,88.2 1773.6,139.8 1900,151L1900 200L0 200z" fill="rgba(13, 110, 253, 1)"></path>
+        </g>
+        <defs>
+            <mask id="SvgjsMask1038">
+                <rect width="1900" height="200" fill="#ffffff"></rect>
+            </mask>
+        </defs>
+    </svg>
+    <section class="abstract-section generic-section bg-site-primary">
+
+    </section>
+
+    <section id="services "class="abstract-section generic-section section-padding">
+
+        <header class="container-fluid">
+            <h2 class="section-header--tertiary">What exactly do you do?</h2>
+        </header>
+
+        <div class="container-fluid">
+            <p id="space-for-service-section">I do a couple things. </p>
+            <ul id="services-list">
+                <li class="list-item">First and foremost, <span class="bold">I help small business owners and entrepreneurs</span> navigate the confusing world of web development.</li>
+                <li class="list-item">Second, I choose technologies and <span class="bold">build websites</span> that suit the specific needs of their business.</li>
+                <li class="list-item">And third, <span class="bold">I write web copy</span> that helps their business express who they are and what they sell</li>
+            </ul>
+        </div>
+
+        <div>
+            {% include "components/services.njk" %}
+        </div>
+
+    </section>
+</main>
+

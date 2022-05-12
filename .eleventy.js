@@ -3,7 +3,9 @@ module.exports = function(eleventyConfig) {
     //No processing steps involved. Just the content 
     eleventyConfig.addPassthroughCopy("images")
     eleventyConfig.addPassthroughCopy("admin")
-    eleventyConfig.addPassthroughCopy("assets")
+    eleventyConfig.addPassthroughCopy("assets/fonts")
+    eleventyConfig.addPassthroughCopy("assets/imgs")
+    eleventyConfig.addPassthroughCopy("assets/js")
     eleventyConfig.addPassthroughCopy("css")
     return {
         passthroughFileCopy: true

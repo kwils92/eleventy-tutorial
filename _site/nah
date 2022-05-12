@@ -51,10 +51,8 @@
         </div>
     </div>
 </nav>
-    
-
-<main id="home-page"> 
-    <section id="hero-banner" class="abstract-section hero-section bg-site-primary container-fluid">
+    <main id="home-page"> 
+    <section id="hero-banner" class="abstract-section hero-section container-fluid">
         <header id="home-page-hero-header">
             <h1 class="hero-header--primary a-slide-left__fast" >
                 Is your website stressing you out? 
@@ -64,7 +62,7 @@
             </h2>
 
             <div>
-                <a href="" class="btn bg-white txt-site-primary btn-lg a-fade-in">
+                <a href="" class="btn btn-primary btn-lg a-fade-in">
                     Learn more
                 </a>
             </div>
@@ -73,56 +71,43 @@
         <div>
             <img src="/assets/imgs/programmer.svg" id="hero-image">
         </div>
+
+        <!-- <div id="scroll-indicator" class=" justify-center text-muted">
+            <p id="scroll-indicator--text">scroll down</p>
+            <i id="scroll-indicator--icon" class="fas fa-chevron-down"></i>
+        </div> -->
     </section>
-    <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" width="100%" height="100" preserveAspectRatio="xMidYMid slice" viewBox="0 0 1905 100">
-        <g mask="url(&quot;#SvgjsMask1041&quot;)" fill="none">
-            <path transform="scale(1, -1) translate(0, -100)" d="M 0,76 C 126.8,67 380.4,31.4 634,31 C 887.6,30.6 1014.8,78 1268,74 C 1521.2,70 1773.6,23.6 1905,11L1905 100L0 100z" fill="rgba(13, 110, 253, 1)"></path>
+
+    <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" width="1900" height="200" preserveAspectRatio="none" viewBox="0 0 1900 200">
+        <g mask="url(&quot;#SvgjsMask1038&quot;)" fill="none">
+            <path d="M 0,45 C 126.8,73 380.4,175 634,185 C 887.6,195 1014.8,101.8 1268,95 C 1521.2,88.2 1773.6,139.8 1900,151L1900 200L0 200z" fill="rgba(13, 110, 253, 1)"></path>
         </g>
         <defs>
-            <mask id="SvgjsMask1041">
-                <rect width="100%" height="100" fill="#ffffff"></rect>
+            <mask id="SvgjsMask1038">
+                <rect width="1900" height="200" fill="#ffffff"></rect>
             </mask>
         </defs>
     </svg>
+    <section class="abstract-section generic-section bg-site-primary">
 
-    <section class="abstract-section generic-section container-fluid">
-        <header>
-            <h2 class="section-header--tertiary txt-site-primary">Make your website work for you</h2>
-            <h3>As business owner, you don't have time to be copywriter, content writer, and web developer.</h3>
-        </header>
-
-        <h4 id="process-header" class="section-header--quaternary txt-site-primary" style="margin-top: 5%;">The Process:</h4>
-
-        <div class="img-with-content">
-            <div id="reasons">
-                <div id="reason-1">
-                    <h5><strong>1. Understand your goals</strong></h4>
-                    <p>It could be as simple as making your website faster, or as complicated as rewriting your copy.</p>
-                </div>
-                <div id="reason-2">
-                    <h5><strong>2. Create a plan of action</strong></h4>
-                    <p>Agencies that offer only WordPress or SquareSpace are doing you a disservice. Let's create a plan that suits <strong>your business and your budget</strong></p>
-                </div>
-                <div id="reason-3">
-                    <h5><strong>3. Craft high-quality, timely solutions</strong></h4>
-                    <p>You needed a solution yesterday, and one that will work. Benefit from solutions that work for you and not the other way around.</p>
-                </div>
-
-                <div id="reason-4">
-                    <h5><strong>4. Futureproof your success</strong></h4>
-                    <p>Retain the rights to your content and your website. Don't let your website or your content be held hostage by your developer or writer!</p>
-                </div>
-            </div>
-
-            <img src="/assets/imgs/multitasking-person.svg" class="section-img__right" alt="Person Multitasking">
-        </div>
     </section>
 
-    <section class="abstract-section generic-section container-fluid">
-        <header>
-            <h2 class="section-header--tertiary txt-site-primary">Services</h2>
+    <section id="services "class="abstract-section generic-section section-padding">
+
+        <header class="container-fluid">
+            <h2 class="section-header--tertiary">What exactly do you do?</h2>
         </header>
-        <div id="services">
+
+        <div class="container-fluid">
+            <p id="space-for-service-section">I do a couple things. </p>
+            <ul id="services-list">
+                <li class="list-item">First and foremost, <span class="bold">I help small business owners and entrepreneurs</span> navigate the confusing world of web development.</li>
+                <li class="list-item">Second, I choose technologies and <span class="bold">build websites</span> that suit the specific needs of their business.</li>
+                <li class="list-item">And third, <span class="bold">I write web copy</span> that helps their business express who they are and what they sell</li>
+            </ul>
+        </div>
+
+        <div>
             <a href="/services/web-development" class="txt-white no-link-underline">
     <div class="service-card">
         <h3 class="service-card--header">
@@ -156,76 +141,11 @@
 </div>
 </a>
         </div>
-    </section>
-
-    <section id="reviews-section" class="container-fluid abstract-section generic-section__small bg-site-tertiary">
-        <header >
-            <h2 class="section-header--tertiary txt-site-primary">What Clients <br>Have Said:</h2>
-        </header>
-
-        <div id="carouselExampleDark" class="carousel c-carousel carousel-dark slide" data-bs-ride="carousel">
-        <div class="carousel-inner" style="text-align: center;">
-            <div class="c-carousel-item carousel-item active" data-bs-interval="5000">
-                <p>"Excellent writing. Very responsive. Would hire again."</p>
-                <p><a href="https://www.upwork.com/freelancers/~013d913fc9c8fd2419"><strong>- Daniel</strong> (Upwork)</a></p>
-            </div>
-            <div class="c-carousel-item carousel-item" data-bs-interval="5000">
-                <p>"Great writer, very responsive!"</p>
-                <p><a href="https://www.upwork.com/freelancers/~013d913fc9c8fd2419"><strong>- Petunia</strong> (Upwork)</a></p>
-            </div>
-            <div class="c-carousel-item carousel-item" data-bs-interval="8000">
-                <p>"Always does a great job. Clean copy, always on time. Really gets our publication's voice."</p>
-                <p><a href="https://www.upwork.com/freelancers/~013d913fc9c8fd2419"><strong>- Shane</strong> (Upwork)</a></p>
-            </div>
-        </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-        </button>
-        </div>
-    </section>
-
-    <section class="abstract-section generic-section container-fluid">
-        <header>
-            <h2 class="header-spacing section-header--tertiary txt-site-primary">Latest Posts</h2>
-        </header>
-        <div class="latest-posts">
-        
-            <div class="card c-card" style="width: 18rem;">
-                <img class="card-img-top" src="/images/uploads/image1.jpg" alt="Card image cap">
-                <div class="card-body">
-                    <h5 class="card-title">Build a site that isn&#39;t ass</h5>
-                    <p class="card-text m-blog-desc">This is a test post for the netlify cms. this post was created in netlify. This is a test post for the netlify cms. this post was created in netlify.</p>
-                    <a href="/posts/2021-07-03-netlify-test/" class="btn bg-site-primary">Read More</a>
-                </div>
-            </div>
-        
-            <div class="card c-card" style="width: 18rem;">
-                <img class="card-img-top" src="/images/uploads/image1.jpg" alt="Card image cap">
-                <div class="card-body">
-                    <h5 class="card-title">How to Blog Goodly</h5>
-                    <p class="card-text m-blog-desc">This is a test post for the netlify cms. this post was created in netlify. This is a test post for the netlify cms. this post was created in netlify.</p>
-                    <a href="/posts/2021-07-20-test copy/" class="btn bg-site-primary">Read More</a>
-                </div>
-            </div>
-        
-            <div class="card c-card" style="width: 18rem;">
-                <img class="card-img-top" src="/images/uploads/image1.jpg" alt="Card image cap">
-                <div class="card-body">
-                    <h5 class="card-title">Does SEO work?</h5>
-                    <p class="card-text m-blog-desc">This is a test post for the netlify cms. this post was created in netlify. This is a test post for the netlify cms. this post was created in netlify.</p>
-                    <a href="/posts/2021-07-20-test/" class="btn bg-site-primary">Read More</a>
-                </div>
-            </div>
-        
-        </div>
 
     </section>
 </main>
+
+
     <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" width="100%" height="100" preserveAspectRatio="xMidYMid slice" viewBox="0 0 1905 100">
     <g mask="url(&quot;#SvgjsMask1053&quot;)" fill="none">
         <path d="M 0,5 C 126.8,17.6 380.4,62.4 634,68 C 887.6,73.6 1014.8,33.6 1268,33 C 1521.2,32.4 1773.6,58.6 1905,65L1905 100L0 100z" fill="rgba(13, 110, 253, 1)"></path>
