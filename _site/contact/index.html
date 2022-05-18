@@ -55,7 +55,7 @@
 <div class="about-layout">
     <h1 style="text-align: center; margin: 1.5em 0 1.5em 0;">Contact Ken</h1>
     <section class="abstract-section generic-section">
-        <form name="contact" action="/thank-you" method="POST" data-netlify="true">
+        <form name="contact" action="/thank-you" method="POST" data-netlify-recaptcha="true" data-netlify="true">
             <div class="form-group form-spacing">
                 <label for="email">Email Address <span style="color: red;">*</span></label>
                 <input id="email" name="Client-Email" type="email" class="form-control" aria-describedby="emailHelp" placeholder="Enter Email Address" required>
@@ -92,7 +92,7 @@
 
             <div class="form-group form-spacing">
                 <label for="message">Please briefly describe your project:</label>
-                <textarea class="form-control" name="Message" id="message" rows="5" placeholder="Describe your project (250 word maximum)" max-length="250"></textarea>
+                <textarea class="form-control" name="Description" id="message" rows="5" placeholder="Describe your project (250 word maximum)" max-length="250"></textarea>
             </div>
             <div class="form-group form-spacing">
                 <button class="btn bg-site-primary btn-lg" type="submit">Submit</button>
