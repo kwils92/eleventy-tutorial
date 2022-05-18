@@ -481,10 +481,6 @@ body{
         margin: 0 0 1.5em 0; 
     }
 
-    #home-page-hero-header h2{
-        padding: 0 0 5% 10%;
-    }
-
     #reasons{
         width: 80%;
         display: grid; 
