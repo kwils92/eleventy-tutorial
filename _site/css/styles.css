@@ -97,6 +97,11 @@ body{
         max-width: 150px;
     }
 
+    /* Honey pot css */
+    .not-this-one{
+        display: none; 
+    }
+
     /* Footer */
     #footer{
         /* color: white;
