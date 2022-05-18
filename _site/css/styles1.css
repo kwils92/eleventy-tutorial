@@ -413,6 +413,12 @@ body{
         padding: 0 20% 0 20%;
     }
 
+    .under-construction{
+        display: flex; 
+        flex-direction: row;
+        align-items: center;
+    }
+
     .hero-section{
         min-height: 55vh;
         max-height: 55vh;

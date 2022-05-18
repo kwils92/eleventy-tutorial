@@ -5,5 +5,50 @@ permalink: /contact/
 ---
 
 <div class="about-layout">
-    <h1 class="">Contact Ken</h1>
+    <h1 style="text-align: center; margin: 1.5em 0 1.5em 0;">Contact Ken</h1>
+    <section class="abstract-section generic-section">
+        <form name="contact" netlify>
+            <div class="form-group form-spacing">
+                <label for="email">Email Address <span style="color: red;">*</span></label>
+                <input id="email" type="email" class="form-control" aria-describedby="emailHelp" placeholder="Enter Email Address" required>
+            </div>
+            <div class="form-group form-spacing">
+                <label for="client-name">Your Name <span style="color: red;">*</span></label>
+                <input id="client-name" type="text" class="form-control" placeholder="Enter Your Name" required>
+            </div>
+            <div class="form-group form-spacing">
+                <label for="client-site">Your Website</label>
+                <input id="client-site" type="text" class="form-control" placeholder="What's your website URL (example: kenwrites.ca)">
+            </div>
+            <div class="form-group form-spacing">
+                <label for="help-type">What do you need help with?</label>
+                <select class="form-control" id="help-type">
+                    <option>Web Development</option>
+                    <option>Web Consultation</option>
+                    <option>Copywriting</option>
+                    <option>Content Writing</option>
+                    <option>Auditing</option>
+                </select>
+            </div>
+            <div class="form-group form-spacing" style="display: flex; flex-direction: column;">
+                <label>Are you looking for a website/writing audit today?</label>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="yes-audit" id="audit-yes" value="yes">
+                    <label class="form-check-label" for="audit-yes">Yes</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="no-audit" id="audit-no" value="no">
+                    <label class="form-check-label" for="audit-no">No</label>
+                </div>
+            </div>
+
+            <div class="form-group form-spacing">
+                <label for="message">Please briefly describe your project:</label>
+                <textarea class="form-control" id="message" rows="5" placeholder="Describe your project (250 word maximum)" max-length="250"></textarea>
+            </div>
+            <div class="form-group form-spacing">
+                <button class="btn bg-site-primary btn-lg" type="submit">Submit</button>
+            </div>
+        </form>
+    </section>
 </div>
