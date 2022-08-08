@@ -1,8 +1,14 @@
 ---
 layout: layouts/base.njk
-title: My Blog
+title: Ken Wilson | Blog
 permalink: /posts/
 ---
+<!-- This is the blog list -->
 
 {% set postslist = collections.posts %}
-{% include "components/under-construction.njk" %}
+<main id="blog-list-page">
+    <section class="abstract-section generic-section blog-list">
+        {% include "components/postslist.njk" %}
+    </section>
+</main>
+

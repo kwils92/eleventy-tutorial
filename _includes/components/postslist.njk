@@ -1,10 +1,11 @@
-<ul>
-    {% for post in postslist %}
-        <li> 
-            <strong>
-                <a href="{{ post.url | url }}"> {{ post.data.title }} </a>
-            </strong>
-            <span> {{ post.data.description }} </span>
-        </li>
-    {% endfor %}
-</ul>
+{% for post in postslist %}
+    <div class="card c-card" style="width: 18rem;">
+        <img class="card-img-top" src="{{post.data.featuredImage}}" alt="Card image cap">
+        <div class="card-body">
+            <h5 class="card-title">{{ post.data.title }}</h5>
+            <p><strong>{{ post.data.data }}</strong></p>
+            <p class="card-text m-blog-desc">{{ post.data.description }}</p>
+            <a href="{{ post.url | url }}" class="btn bg-site-primary">Read More</a>
+        </div>
+    </div>
+{% endfor %}

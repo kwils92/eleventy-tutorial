@@ -237,6 +237,16 @@ body{
             padding: 0 10% 0 10%;
         }
 
+        .blog-list{
+            display: flex;
+            flex-direction: row;
+        }
+
+        .post-img{
+            max-width: 100%;
+            margin: 2em 0 1em 0;
+        }
+
         .c-card{
             margin: 10% 0 10% 0;
             min-width: 20em; 

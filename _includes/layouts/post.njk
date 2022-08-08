@@ -1,10 +1,16 @@
 ---
 layout: layouts/base.njk
 ---
+<!-- This is the actual blog post page -->
 
-<h2 class="post-title">{{ title }}</h2> 
-
-<img class="post-img" src="{{ featuredImage | url }}" alt="tst"></img>
-<div class="container-fluid post-body">
-    {{ content | safe }}
-</div> 
+<main id="single-post">
+    <article class="abstract-section generic-section">
+        <img class="post-img" src="{{ featuredImage | url }}" alt="tst"></img>
+        <h1 class="post-title txt-site-primary">{{ title }}</h1> 
+        <p><strong>{{ date }}</strong></p>
+        <p><strong>By: {{ author }}</strong></p>
+        <div class="post-body">
+            {{ content | safe }}
+        </div> 
+    </article>
+</main>
