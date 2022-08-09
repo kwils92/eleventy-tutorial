@@ -7,7 +7,7 @@ permalink: /
 
 <main id="home-page"> 
     <section id="hero-banner" class="abstract-section hero-section bg-site-primary container-fluid">
-        <header id="home-page-hero-header">
+        <header id="home-page-hero-header" class="hero-text">
             <h1 class="hero-header--primary a-slide-left__fast" >
                 Is your website stressing you out? 
             </h1>
@@ -37,7 +37,7 @@ permalink: /
         </defs>
     </svg>
 
-    <section class="abstract-section generic-section container-fluid">
+    <section id="top-section" class="abstract-section generic-section container-fluid">
         <header>
             <h2 class="section-header--tertiary txt-site-primary">Make your website work for you</h2>
             <h3>As business owner, you don't have time to be copywriter, content writer, and web developer.</h3>
@@ -72,7 +72,7 @@ permalink: /
         </div>
     </section>
 
-    <section class="abstract-section generic-section container-fluid">
+    <section id="services-section" class="abstract-section generic-section container-fluid">
         <header>
             <h2 class="section-header--tertiary txt-site-primary">What services do you provide?</h2>
             <h3>I can wear any of the following hats for you:</h3>
@@ -113,22 +113,35 @@ permalink: /
         </div>
     </section>
 
-    <section class="abstract-section generic-section container-fluid">
+    <section id="blog-section" class="abstract-section generic-section container-fluid">
         <header>
             <h2 class="header-spacing section-header--tertiary txt-site-primary">Latest Posts</h2>
         </header>
         <div class="latest-posts">
         {% for post in postslist %}
-            <div class="card c-card" style="width: 18rem;">
-                <img class="card-img-top" src="{{post.data.featuredImage}}" alt="Card image cap">
-                <div class="card-body">
-                    <h5 class="card-title">{{ post.data.title }}</h5>
-                    <p class="card-text m-blog-desc">{{ post.data.description }}</p>
-                    <a href="{{ post.url | url }}" class="btn bg-site-primary">Read More</a>
+            {% if loop.index0 < 2 %} {# Only display 2 #}
+                <div class="card c-card" style="width: 18rem;">
+                    <img class="card-img-top" src="{{post.data.featuredImage}}" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ post.data.title }}</h5>
+                        <p class="card-text m-blog-desc">{{ post.data.description }}</p>
+                        <a href="{{ post.url | url }}" class="btn bg-site-primary">Read More</a>
+                    </div>
                 </div>
-            </div>
+            {% endif %}
         {% endfor %}
         </div>
 
     </section>
 </main>
+
+<script>
+    document.onreadystatechange = function () {
+    if (document.readyState == "interactive") {
+        fadeIn('#reviews-section', 'a-slide-left__slow');
+        fadeIn('#blog-section', 'a-slide-right__slow');
+        fadeIn('#services-section', 'a-slide-left__slow');
+        fadeIn('#top-section', 'a-slide-right__slow');
+    }
+}
+</script>

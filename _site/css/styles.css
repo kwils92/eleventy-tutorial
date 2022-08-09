@@ -62,7 +62,7 @@ body{
     }
     
     .a-slide-right__slow{
-        animation: 0.70s slidein-left;
+        animation: 0.70s slidein-right;
     }
     
     .a-fade-in{
@@ -184,7 +184,31 @@ body{
     }
 
 
-    /* Sections */
+    /* SECTIONS */
+        .hero-text{
+            display: flex; 
+            flex-direction: column; 
+            row-gap: 20px;
+        }
+
+
+        /* This is the section for the services pages with the little STEP ONE images */
+        .step-section{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .step-section__text{
+            width: 90%; 
+        }
+
+        /* This is the section for the services pages with the little STEP ONE images */
+        .step-section__right{
+            flex-direction: column-reverse;
+        }
+    
         /* Abstract section that doesn't */
         .abstract-section{
             display: flex;
@@ -542,7 +566,7 @@ body{
     }
 
     .generic-section{
-        min-height: 75vh;
+        min-height: 100vh;
         padding: 0 20% 0 20%;
         justify-content: space-evenly;
     }
@@ -676,5 +700,19 @@ body{
 
     #process-header{
         margin-top: 0;
+    }
+
+    .step-section{
+        min-height: 55vh;
+        max-height: 55vh;
+        justify-content: space-around;
+        align-items: center;
+        text-align: center;
+        display: flex;
+        flex-direction: row;
+    }
+
+    .step-section__text{
+        width: 50%; 
     }
 }
